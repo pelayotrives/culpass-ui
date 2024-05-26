@@ -1,5 +1,9 @@
-import React from 'react'
 import { ComponentProps } from 'react'
+import { cva } from 'class-variance-authority'
+
+const ButtonStyles = cva([
+  "w-full",
+])
 
 type ButtonProps = ComponentProps<"button">
 
