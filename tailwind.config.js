@@ -1,10 +1,107 @@
 /** @type {import('tailwindcss').Config} */
+
+import colors from "tailwindcss/colors";
+
 export default {
-  content: [
-    "./src/**/*.{js,ts,jsx,tsx}",
-  ],
+  content: ["./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    fontFamily: {
+      montserrat: ["Montserrat", "Helvetica", "sans-serif"],
+      nunito: ["Nunito Sans", "Helvetica", "sans-serif"],
+    },
+    fontSize: {
+      "display-xl": "140px",
+      "display-lg": "84px",
+      "display-md": "72px",
+      "display": "64px",
+      "display-sm": "60px",
+      "title-xl": "56px",
+      "title-lg": "48px",
+      "title-md": "40px",
+      "title": "32px",
+      "title-sm": "28px",
+      "paragraph-xl": "24px",
+      "paragraph-lg": "20px",
+      "paragraph-md": "18px",
+      "paragraph": "16px",
+      "paragraph-sm": "14px",
+    },
+    extend: {
+      colors: {
+        primary: {
+          DEFAULT: "#EFA435",
+          1: "#EFA435",
+          2: "#F0AB45",
+          3: "#F1B254",
+          4: "#F2B964",
+          5: "#F4C073",
+          6: "#F5C783",
+          7: "#F6CE92",
+          8: "#F7D5A2",
+          9: "#F8DCB1",
+          10: "#FAE3C0",
+          11: "#FBEAD0",
+          12: "#FCF1E0",
+        },
+        secondary: {
+          DEFAULT: "#54329B",
+          1: "#54329B",
+          2: "#6243A3",
+          3: "#7054AB",
+          4: "#7E65B4",
+          5: "#8D76BC",
+          6: "#9B87C4",
+          7: "#A998CD",
+          8: "#B7A9D5",
+          9: "#C6BADD",
+          10: "#D4CBE6",
+          11: "#E2DCEE",
+          12: "#F0EDF6",
+        },
+        tertiary: {
+          DEFAULT: "#101010",
+          1: "#101010",
+          2: "#121212",
+          3: "#141414",
+          4: "#161616",
+          5: "#181818",
+          6: "#1A1A1A",
+          7: "#2A2A2A",
+          8: "#3A3A3A",
+          9: "#4B4B4B",
+          10: "#5B5B5B",
+          11: "#6B6B6B",
+          12: "#7C7C7C",
+        },
+        quaternary: {
+          DEFAULT: "#FCFCFC",
+          1: "#ADADAD",
+          2: "#B5B5B5",
+          3: "#C6C6C6",
+          4: "#CFCECE",
+          5: "#D6D6D6",
+          6: "#DBDBDB",
+          7: "#E4E4E4",
+          8: "#E9E9E9",
+          9: "#EEEEEE",
+          10: "#F4F4F4",
+          11: "#F8F8F8",
+          12: "#FCFCFC",
+        },
+        success: "#36EF6A",
+        info: "#36ADEF",
+        warning: "#FB8936",
+        error: "#EF3636",
+      },
+      boxShadow: {
+        expanded:
+          "0px 10px 1px rgba(221, 221, 221, 1), 0 10px 20px rgba(204, 204, 204, 1)",
+        subtle:
+          "rgba(50, 50, 105, 0.15) 0px 2px 5px 0px, rgba(0, 0, 0, 0.05) 0px 1px 1px 0px",
+        regular:
+          "rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px",
+      },
+    },
   },
   plugins: [],
-}
+};
