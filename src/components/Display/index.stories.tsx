@@ -1,9 +1,9 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Text } from ".";
+import { Display } from ".";
 
-const meta: Meta<typeof Text> = {
-  title: "Components/Text",
-  component: Text,
+const meta: Meta<typeof Display> = {
+  title: "Components/Display",
+  component: Display,
   parameters: {
     layout: "centered",
   },
@@ -17,9 +17,9 @@ type Story = StoryObj<typeof meta>;
 export const Default: Story = {
   args: {
     align: "left",
-    children: "Voluptate ut Lorem culpa ullamco.",
+    children: "Labore aliqua proident aliqua.",
     italic: false,
-    size: "paragraph4",
+    size: "display4",
     underline: false,
     weight: "semibold",
   },

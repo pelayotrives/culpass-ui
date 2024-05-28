@@ -20,7 +20,7 @@ const ButtonStyles = cva(
       },
       size: {
         sm: "px-4 py-2 text-paragraph",
-        md: "px-4 py-2 text-paragraph",
+        md: "px-4 py-2 text-paragraph-md",
         lg: "px-6 py-3 text-paragraph-md",
       },
       colorscheme: {

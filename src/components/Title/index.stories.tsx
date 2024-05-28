@@ -16,12 +16,12 @@ type Story = StoryObj<typeof meta>;
 
 export const Default: Story = {
   args: {
+    align: "left",
     as: "h1",
     children: "Amet excepteur qui anim fugiat.",
-    size: "title4",
-    align: "left",
-    weight: "semibold",
     italic: false,
-    underline: false
+    size: "title4",
+    underline: false,
+    weight: "semibold",
   },
 };

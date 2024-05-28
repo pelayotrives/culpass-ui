@@ -2,14 +2,14 @@ import { ComponentProps, forwardRef } from "react";
 import { VariantProps, cva } from "class-variance-authority";
 import { cn } from "@/utils";
 
-const TextStyles = cva("", {
+const DisplayStyles = cva("", {
   variants: {
     size: {
-      paragraph1: "text-paragraph-xl",
-      paragraph2: "text-paragraph-lg",
-      paragraph3: "text-paragraph-md",
-      paragraph4: "text-paragraph",
-      paragraph5: "text-paragraph-sm",
+      display1: "text-display-xl",
+      display2: "text-display-lg",
+      display3: "text-display-md",
+      display4: "text-display",
+      display5: "text-display-sm"
     },
     fontFamily: {
       nunito: "font-nunito",
@@ -38,7 +38,7 @@ const TextStyles = cva("", {
     },
   },
   defaultVariants: {
-    size: "paragraph4",
+    size: "display4",
     align: "left",
     fontFamily: "nunito",
     weight: "semibold",
@@ -47,15 +47,15 @@ const TextStyles = cva("", {
   },
 });
 
-type TextProps = ComponentProps<"p"> & VariantProps<typeof TextStyles>;
+type DisplayProps = ComponentProps<"p"> & VariantProps<typeof DisplayStyles>;
 
-export const Text = forwardRef<HTMLParagraphElement, TextProps>(
+export const Display = forwardRef<HTMLParagraphElement, DisplayProps>(
   ({ className, align, size, fontFamily, weight, italic, underline, ...props }, ref) => {
     return (
       <p
         ref={ref}
         className={cn(
-          TextStyles({
+          DisplayStyles({
             align,
             size,
             fontFamily,
