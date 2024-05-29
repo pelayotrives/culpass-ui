@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-
-import colors from "tailwindcss/colors";
+// import colors from "tailwindcss/colors";
 
 export default {
   content: ["./src/**/*.{js,ts,jsx,tsx}"],
@@ -27,6 +26,18 @@ export default {
       "paragraph-sm": "14px",
     },
     extend: {
+      lineHeight: {
+        '1': '1',
+        '2': '1.15',
+        '3': '1.25',
+        '4': '1.325',
+        '5': '1.5',
+        '6': '1.625',
+        '7': '1.75',
+        '8': '1.825',
+        '9': '1.925',
+        '10': '2'
+      },
       colors: {
         primary: {
           DEFAULT: "#EFA435",

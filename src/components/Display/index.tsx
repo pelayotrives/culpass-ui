@@ -11,6 +11,18 @@ const DisplayStyles = cva("", {
       display4: "text-display",
       display5: "text-display-sm"
     },
+    lineHeight: {
+      1: "leading-1",
+      2: "leading-2",
+      3: "leading-3",
+      4: "leading-4",
+      5: "leading-5",
+      6: "leading-6",
+      7: "leading-7",
+      8: "leading-8",
+      9: "leading-9",
+      10: "leading-10",
+    },
     fontFamily: {
       nunito: "font-nunito",
       montserrat: "font-montserrat",
@@ -40,6 +52,7 @@ const DisplayStyles = cva("", {
   defaultVariants: {
     size: "display4",
     align: "left",
+    lineHeight: 2,
     fontFamily: "nunito",
     weight: "semibold",
     italic: false,
@@ -50,7 +63,7 @@ const DisplayStyles = cva("", {
 type DisplayProps = ComponentProps<"p"> & VariantProps<typeof DisplayStyles>;
 
 export const Display = forwardRef<HTMLParagraphElement, DisplayProps>(
-  ({ className, align, size, fontFamily, weight, italic, underline, ...props }, ref) => {
+  ({ className, align, size, fontFamily, lineHeight, weight, italic, underline, ...props }, ref) => {
     return (
       <p
         ref={ref}
@@ -59,6 +72,7 @@ export const Display = forwardRef<HTMLParagraphElement, DisplayProps>(
             align,
             size,
             fontFamily,
+            lineHeight,
             weight,
             italic,
             underline,

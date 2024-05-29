@@ -8,6 +8,19 @@ const meta: Meta<typeof Input> = {
     layout: "centered",
   },
   tags: ["autodocs"],
+  argTypes: {
+    type: {
+      control: { type: 'select' },
+      options: ['text', 'number', 'password', 'date'],
+    },
+    placeholder: {
+      control: { type: 'text' },
+      table: {
+        category: 'Attributes',
+      },
+      if: { arg: 'type', neq: 'date' }
+    },
+  }
 };
 
 export default meta;

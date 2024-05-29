@@ -15,6 +15,18 @@ const TextStyles = cva("", {
       nunito: "font-nunito",
       montserrat: "font-montserrat",
     },
+    lineHeight: {
+      1: "leading-1",
+      2: "leading-2",
+      3: "leading-3",
+      4: "leading-4",
+      5: "leading-5",
+      6: "leading-6",
+      7: "leading-7",
+      8: "leading-8",
+      9: "leading-9",
+      10: "leading-10",
+    },
     weight: {
       thin: "font-thin",
       normal: "font-normal",
@@ -40,6 +52,7 @@ const TextStyles = cva("", {
   defaultVariants: {
     size: "paragraph4",
     align: "left",
+    lineHeight: 2,
     fontFamily: "nunito",
     weight: "semibold",
     italic: false,
@@ -50,7 +63,7 @@ const TextStyles = cva("", {
 type TextProps = ComponentProps<"p"> & VariantProps<typeof TextStyles>;
 
 export const Text = forwardRef<HTMLParagraphElement, TextProps>(
-  ({ className, align, size, fontFamily, weight, italic, underline, ...props }, ref) => {
+  ({ className, align, lineHeight, size, fontFamily, weight, italic, underline, ...props }, ref) => {
     return (
       <p
         ref={ref}
@@ -59,6 +72,7 @@ export const Text = forwardRef<HTMLParagraphElement, TextProps>(
             align,
             size,
             fontFamily,
+            lineHeight,
             weight,
             italic,
             underline,

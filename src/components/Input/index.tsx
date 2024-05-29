@@ -28,18 +28,7 @@ const InputStyles = cva([
   "invalid:outline-none",
   "invalid:border-error",
   "invalid:placeholder:text-error",
-], {
-  variants: {
-  },
-  defaultVariants: {
-    size: "paragraph4",
-    align: "left",
-    fontFamily: "nunito",
-    weight: "semibold",
-    italic: false,
-    underline: false,
-  },
-});
+]);
 
 type InputProps = ComponentProps<"input"> & VariantProps<typeof InputStyles>;
 

@@ -8,6 +8,27 @@ const meta: Meta<typeof Text> = {
     layout: "centered",
   },
   tags: ["autodocs"],
+  argTypes: {
+    align: {
+      control: { type: 'select' },
+      options: ['left', 'center', 'right', 'justify'],
+    },
+    weight: {
+      control: { type: 'select' },
+      options: ['thin', 'normal', 'medium', 'semibold', 'bold'],
+    },
+    fontFamily: {
+      control: { type: 'select' },
+      options: ['nunito', 'montserrat'],
+    },
+    size: {
+      control: { type: 'select' },
+      options: ['paragraph1', 'paragraph2', 'paragraph3', 'paragraph4', 'paragraph5'],
+    },
+    lineHeight: {
+      control: { type: 'number', min: 1, max: 10, step: 1 },
+    },
+  }
 };
 
 export default meta;
@@ -21,6 +42,8 @@ export const Default: Story = {
     italic: false,
     size: "paragraph4",
     underline: false,
+    fontFamily: "nunito",
     weight: "semibold",
+    lineHeight: 2,
   },
 };

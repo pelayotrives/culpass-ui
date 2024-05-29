@@ -1,5 +1,5 @@
 import { Meta, StoryObj } from "@storybook/react";
-import { Button } from ".";
+import { Button, Icons } from ".";
 
 const meta: Meta<typeof Button> = {
   title: "Components/Button",
@@ -8,6 +8,33 @@ const meta: Meta<typeof Button> = {
     layout: "centered",
   },
   tags: ["autodocs"],
+  argTypes: {
+    colorScheme: {
+      control: { type: 'select' },
+      options: ['solid1', 'solid2', 'solid3', 'outline1', 'outline2', 'outline3'],
+    },
+    fontSize: {
+      control: { type: 'select' },
+      options: ['sm', 'regular', 'md', 'lg', 'xl'],
+    },
+    icon: {
+      control: { type: 'select' },
+      options: ['none', ...Icons],
+    },
+    iconPosition: {
+      control: { type: 'select' },
+      options: ['left', 'right'],
+      if: { arg: 'icon', neq: 'none' },
+    },
+    size: {
+      control: { type: 'select' },
+      options: ['sm', 'md', 'lg', 'full'],
+    },
+    variant: {
+      control: { type: 'select' },
+      options: ['solid', 'outline'],
+    },
+  },
 };
 
 export default meta;
@@ -18,8 +45,12 @@ export const PrimarySolid: Story = {
   args: {
     children: "Lorem Ipsum",
     size: "sm",
+    fontSize: "regular",
     variant: "solid",
-    colorscheme: "primary",
+    colorScheme: "solid1",
+    icon: "right",
+    iconPosition: "right",
+    disabled: false,
   },
 };
 
@@ -27,8 +58,12 @@ export const PrimaryOutline: Story = {
   args: {
     children: "Lorem Ipsum",
     size: "sm",
+    fontSize: "regular",
     variant: "outline",
-    colorscheme: "primary",
+    colorScheme: "outline1",
+    icon: "right",
+    iconPosition: "right",
+    disabled: false,
   },
 };
 
@@ -36,8 +71,12 @@ export const SecondarySolid: Story = {
   args: {
     children: "Lorem Ipsum",
     size: "sm",
+    fontSize: "regular",
     variant: "solid",
-    colorscheme: "secondary",
+    colorScheme: "solid2",
+    icon: "right",
+    iconPosition: "right",
+    disabled: false,
   },
 };
 
@@ -45,16 +84,24 @@ export const SecondaryOutline: Story = {
   args: {
     children: "Lorem Ipsum",
     size: "sm",
+    fontSize: "regular",
     variant: "outline",
-    colorscheme: "secondary",
+    colorScheme: "outline2",
+    icon: "right",
+    iconPosition: "right",
+    disabled: false,
   },
 };
 export const TertiarySolid: Story = {
   args: {
     children: "Lorem Ipsum",
     size: "sm",
+    fontSize: "regular",
     variant: "solid",
-    colorscheme: "tertiary",
+    colorScheme: "solid3",
+    icon: "right",
+    iconPosition: "right",
+    disabled: false,
   },
 };
 
@@ -62,7 +109,11 @@ export const TertiaryOutline: Story = {
   args: {
     children: "Lorem Ipsum",
     size: "sm",
+    fontSize: "regular",
     variant: "outline",
-    colorscheme: "tertiary",
+    colorScheme: "outline3",
+    icon: "right",
+    iconPosition: "right",
+    disabled: false,
   },
 };
