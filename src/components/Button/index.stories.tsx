@@ -13,10 +13,6 @@ const meta: Meta<typeof Button> = {
       control: { type: 'select' },
       options: ['solid1', 'solid2', 'solid3', 'outline1', 'outline2', 'outline3'],
     },
-    fontSize: {
-      control: { type: 'select' },
-      options: ['sm', 'regular', 'md', 'lg', 'xl'],
-    },
     icon: {
       control: { type: 'select' },
       options: ['none', ...Icons],
@@ -26,14 +22,14 @@ const meta: Meta<typeof Button> = {
       options: ['left', 'right'],
       if: { arg: 'icon', neq: 'none' },
     },
+    fsize: {
+      control: { type: 'select' },
+      options: ['paragraph1', 'paragraph2', 'paragraph3', 'paragraph4', 'paragraph5'],
+    },
     size: {
       control: { type: 'select' },
       options: ['sm', 'md', 'lg', 'full'],
-    },
-    variant: {
-      control: { type: 'select' },
-      options: ['solid', 'outline'],
-    },
+    }
   },
 };
 
@@ -44,9 +40,8 @@ type Story = StoryObj<typeof meta>;
 export const PrimarySolid: Story = {
   args: {
     children: "Lorem Ipsum",
+    fsize: "paragraph1",
     size: "sm",
-    fontSize: "regular",
-    variant: "solid",
     colorScheme: "solid1",
     icon: "right",
     iconPosition: "right",
@@ -57,9 +52,8 @@ export const PrimarySolid: Story = {
 export const PrimaryOutline: Story = {
   args: {
     children: "Lorem Ipsum",
+    fsize: "paragraph1",
     size: "sm",
-    fontSize: "regular",
-    variant: "outline",
     colorScheme: "outline1",
     icon: "right",
     iconPosition: "right",
@@ -70,9 +64,8 @@ export const PrimaryOutline: Story = {
 export const SecondarySolid: Story = {
   args: {
     children: "Lorem Ipsum",
+    fsize: "paragraph1",
     size: "sm",
-    fontSize: "regular",
-    variant: "solid",
     colorScheme: "solid2",
     icon: "right",
     iconPosition: "right",
@@ -83,9 +76,8 @@ export const SecondarySolid: Story = {
 export const SecondaryOutline: Story = {
   args: {
     children: "Lorem Ipsum",
+    fsize: "paragraph1",
     size: "sm",
-    fontSize: "regular",
-    variant: "outline",
     colorScheme: "outline2",
     icon: "right",
     iconPosition: "right",
@@ -95,9 +87,8 @@ export const SecondaryOutline: Story = {
 export const TertiarySolid: Story = {
   args: {
     children: "Lorem Ipsum",
+    fsize: "paragraph1",
     size: "sm",
-    fontSize: "regular",
-    variant: "solid",
     colorScheme: "solid3",
     icon: "right",
     iconPosition: "right",
@@ -108,9 +99,8 @@ export const TertiarySolid: Story = {
 export const TertiaryOutline: Story = {
   args: {
     children: "Lorem Ipsum",
+    fsize: "paragraph1",
     size: "sm",
-    fontSize: "regular",
-    variant: "outline",
     colorScheme: "outline3",
     icon: "right",
     iconPosition: "right",
