@@ -4,7 +4,7 @@ import { cn } from "@/utils";
 
 const TextStyles = cva("", {
   variants: {
-    size: {
+    fontSize: {
       paragraph1: "text-paragraph-xl",
       paragraph2: "text-paragraph-lg",
       paragraph3: "text-paragraph-md",
@@ -50,7 +50,7 @@ const TextStyles = cva("", {
     },
   },
   defaultVariants: {
-    size: "paragraph4",
+    fontSize: "paragraph4",
     align: "left",
     lineHeight: 2,
     fontFamily: "nunito",
@@ -63,14 +63,14 @@ const TextStyles = cva("", {
 type TextProps = ComponentProps<"p"> & VariantProps<typeof TextStyles>;
 
 export const Text = forwardRef<HTMLParagraphElement, TextProps>(
-  ({ className, align, lineHeight, size, fontFamily, weight, italic, underline, ...props }, ref) => {
+  ({ className, align, lineHeight, fontSize, fontFamily, weight, italic, underline, ...props }, ref) => {
     return (
       <p
         ref={ref}
         className={cn(
           TextStyles({
             align,
-            size,
+            fontSize,
             fontFamily,
             lineHeight,
             weight,

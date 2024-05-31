@@ -2,30 +2,31 @@
 // import colors from "tailwindcss/colors";
 
 export default {
-  content: ["./src/**/*.{js,ts,jsx,tsx}", "./src/components/**/*.{js,ts,jsx,tsx}"],
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}", "./src/components/**/*.{js,ts,jsx,tsx}"],
+  important: true,
   theme: {
-    fontFamily: {
-      montserrat: ["Montserrat", "Helvetica", "sans-serif"],
-      nunito: ["Nunito Sans", "Helvetica", "sans-serif"],
-    },
-    fontSize: {
-      "display-xl": "140px",
-      "display-lg": "84px",
-      "display-md": "72px",
-      "display": "64px",
-      "display-sm": "60px",
-      "title-xl": "56px",
-      "title-lg": "48px",
-      "title-md": "40px",
-      "title": "32px",
-      "title-sm": "28px",
-      "paragraph-xl": "24px",
-      "paragraph-lg": "20px",
-      "paragraph-md": "18px",
-      "paragraph": "16px",
-      "paragraph-sm": "14px",
-    },
     extend: {
+      fontFamily: {
+        montserrat: ["Montserrat", "Helvetica", "sans-serif"],
+        nunito: ["Nunito Sans", "Helvetica", "sans-serif"],
+      },
+      fontSize: {
+        "display-xl": "140px",
+        "display-lg": "84px",
+        "display-md": "72px",
+        "display": "64px",
+        "display-sm": "60px",
+        "title-xl": "56px",
+        "title-lg": "48px",
+        "title-md": "40px",
+        "title": "32px",
+        "title-sm": "28px",
+        "paragraph-xl": "24px",
+        "paragraph-lg": "20px",
+        "paragraph-md": "18px",
+        "paragraph": "16px",
+        "paragraph-sm": "14px",
+      },
       lineHeight: {
         '1': '1',
         '2': '1.15',

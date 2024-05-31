@@ -21,7 +21,7 @@ const meta: Meta<typeof Title> = {
       control: { type: 'select' },
       options: ['thin', 'normal', 'medium', 'semibold', 'bold'],
     },
-    size: {
+    fontSize: {
       control: { type: 'select' },
       options: ['title1', 'title2', 'title3', 'title4', 'title5'],
     },
@@ -46,7 +46,7 @@ export const Default: Story = {
     as: "h1",
     children: "Amet excepteur qui anim fugiat.",
     italic: false,
-    size: "title4",
+    fontSize: "title4",
     underline: false,
     weight: "semibold",
     lineHeight: 2,

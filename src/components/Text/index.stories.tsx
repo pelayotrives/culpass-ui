@@ -21,7 +21,7 @@ const meta: Meta<typeof Text> = {
       control: { type: 'select' },
       options: ['nunito', 'montserrat'],
     },
-    size: {
+    fontSize: {
       control: { type: 'select' },
       options: ['paragraph1', 'paragraph2', 'paragraph3', 'paragraph4', 'paragraph5'],
     },
@@ -40,7 +40,7 @@ export const Default: Story = {
     align: "left",
     children: "Voluptate ut Lorem culpa ullamco.",
     italic: false,
-    size: "paragraph4",
+    fontSize: "paragraph4",
     underline: false,
     fontFamily: "nunito",
     weight: "semibold",

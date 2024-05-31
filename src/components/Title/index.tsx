@@ -8,7 +8,7 @@ import {
 
 const TitleStyles = cva(["font-montserrat"], {
   variants: {
-    size: {
+    fontSize: {
       title1: "text-title-xl",
       title2: "text-title-lg",
       title3: "text-title-md",
@@ -50,7 +50,7 @@ const TitleStyles = cva(["font-montserrat"], {
     },
   },
   defaultVariants: {
-    size: "title4",
+    fontSize: "title4",
     lineHeight: 2,
     align: "left",
     weight: "semibold",
@@ -74,7 +74,7 @@ export const Title: TitleComponent = forwardRef(
     {
       as,
       align,
-      size,
+      fontSize,
       lineHeight,
       italic,
       underline,
@@ -91,7 +91,7 @@ export const Title: TitleComponent = forwardRef(
         ref={ref}
         className={cn(
           TitleStyles({
-            size,
+            fontSize,
             weight,
             lineHeight,
             italic,

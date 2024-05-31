@@ -21,7 +21,7 @@ const meta: Meta<typeof Display> = {
       control: { type: 'select' },
       options: ['nunito', 'montserrat'],
     },
-    size: {
+    fontSize: {
       control: { type: 'select' },
       options: ['display1', 'display2', 'display3', 'display4', 'display5'],
     },
@@ -40,7 +40,7 @@ export const Default: Story = {
     align: "left",
     children: "Labore aliqua proident aliqua.",
     italic: false,
-    size: "display4",
+    fontSize: "display4",
     underline: false,
     weight: "semibold",
     fontFamily: "nunito",

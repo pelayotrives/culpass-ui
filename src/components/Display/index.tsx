@@ -4,7 +4,7 @@ import { cn } from "@/utils";
 
 const DisplayStyles = cva("", {
   variants: {
-    size: {
+    fontSize: {
       display1: "text-display-xl",
       display2: "text-display-lg",
       display3: "text-display-md",
@@ -50,7 +50,7 @@ const DisplayStyles = cva("", {
     },
   },
   defaultVariants: {
-    size: "display4",
+    fontSize: "display4",
     align: "left",
     lineHeight: 2,
     fontFamily: "nunito",
@@ -63,14 +63,14 @@ const DisplayStyles = cva("", {
 type DisplayProps = ComponentProps<"p"> & VariantProps<typeof DisplayStyles>;
 
 export const Display = forwardRef<HTMLParagraphElement, DisplayProps>(
-  ({ className, align, size, fontFamily, lineHeight, weight, italic, underline, ...props }, ref) => {
+  ({ className, align, fontSize, fontFamily, lineHeight, weight, italic, underline, ...props }, ref) => {
     return (
       <p
         ref={ref}
         className={cn(
           DisplayStyles({
             align,
-            size,
+            fontSize,
             fontFamily,
             lineHeight,
             weight,
