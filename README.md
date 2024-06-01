@@ -1,6 +1,6 @@
 # Culpass UI Components Library
 
-Welcome to the Culpass UI Components Library, version 1.0! This library is a collection of reusable UI components designed and built for Culpass S.L. by Pelayo Trives. The library is licensed under the MIT license.
+Welcome to the Culpass UI Components Library, version 1.0! This library is a collection of reusable UI components designed and built for Culpass S.L. by Pelayo Trives.
 
 ## Components
 
