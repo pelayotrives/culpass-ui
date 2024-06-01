@@ -87,19 +87,8 @@ export const Title: TitleComponent = forwardRef(
     const Component = as || "span";
 
     return (
-      <Component
-        ref={ref}
-        className={cn(
-          TitleStyles({
-            fontSize,
-            weight,
-            lineHeight,
-            italic,
-            underline,
-            align,
-            className,
-          })
-        )}
+      <Component ref={ref}
+        className={cn(TitleStyles({fontSize, weight, lineHeight, italic, underline, align, className,}))}
         {...props}
       />
     );
