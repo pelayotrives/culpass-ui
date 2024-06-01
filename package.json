@@ -9,12 +9,12 @@
   "files": [
     "dist"
   ],
-  "main": "dist/clp-ui-xyz-umd.cjs",
-  "module": "dist/clp-ui-xyz.js",
+  "main": "dist/culpass-ui-umd.cjs",
+  "module": "dist/culpass-ui.js",
   "exports": {
     ".": {
-      "import": "./dist/clp-ui-xyz.js",
-      "require": "./dist/clp-ui-xyz-umd.cjs"
+      "import": "./dist/culpass-ui.js",
+      "require": "./dist/culpass-ui-umd.cjs"
     }
   },
   "scripts": {

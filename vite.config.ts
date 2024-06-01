@@ -14,7 +14,7 @@ export default defineConfig({
     lib: {
       entry: path.resolve(__dirname, "./src/components/index.tsx"),
       name: "CulpassUI",
-      fileName: "clp-ui-xyz",
+      fileName: "culpass-ui",
     },
     rollupOptions: {
       external: ["react", "react-dom"],
