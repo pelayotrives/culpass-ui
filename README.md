@@ -1,29 +1,59 @@
-# Culpass UI
+# Culpass UI Components Library
 
-A professionally crafted and graphically illustrated library for Culpass SL. It encompasses all components utilized across the company's repositories and projects.
+Welcome to the Culpass UI Components Library, version 1.0! This library is a collection of reusable UI components designed and built for Culpass S.L. by Pelayo Trives. The library is licensed under the MIT license.
 
-## Technologies Utilized
+## Components
 
-- React + Vite
-- TypeScript
+The Culpass UI Components Library consists of the following components:
+
+- **Button**: A customizable button component.
+- **Input**: A flexible input component.
+- **Text**: A component for displaying text.
+- **Display**: A component for larger display text.
+- **Title**: A component for titles and headings.
+- **Stack**: A layout component for stacking elements.
+- **Box**: A layout component for creating boxes and containers.
+
+## Features
+
+- **Tailwind Config**: Includes a Tailwind Config file with all the guidelines for colors and other attributes.
+- **Built with Vite and TypeScript**: Ensuring fast development and type safety.
+- **Styling**: Utilizes Tailwind CSS along with Tailwind Merge, CVA, and CLSX for enhanced styling capabilities.
+- **Storybook**: Integrated with Storybook for visualizing and testing components in an isolated environment.
+
+## Installation
+
+To install the Culpass UI Components Library, run:
+
+```bash
+npm install culpass-ui
+```
 
 ## Usage
 
-This library provides a clear and comprehensive display of all components used within Culpass. It serves as a template for all company repositories.
+Import and use the components in your project as follows:
 
-## Libraries Employed
+```javascript
+import { Button, Input, Text, Display, Title, Stack, Box } from 'culpass-ui';
 
-- Storybook
-- Tailwind CSS
-- Tailwind Merge
-- CLSX
-- Class Variance Authority
-- ESLint
+// Example usage in a component
+const App = () => (
+  <div>
+    <Title>Welcome to Culpass UI</Title>
+    <Stack>
+      <Button>Click Me</Button>
+      <Input placeholder="Enter text" />
+    </Stack>
+  </div>
+);
+
+export default App;
+```
 
 ## License
 
-This project is licensed under the MIT License.
+This library is licensed under the CC-BY-NC-ND 4.0 DEED License. See [this link](https://creativecommons.org/licenses/by-nc-nd/4.0/deed.en) for more information.
 
-## Contact
+---
 
-Pelayo Trives Pozuelo - [LinkedIn](https://www.linkedin.com/in/pelayo-trives-pozuelo/)
+© 2024 Culpass S.L. Created by Pelayo Trives.

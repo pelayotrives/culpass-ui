@@ -66,7 +66,6 @@ const InputStyles = cva([
 type InputProps = ComponentProps<"input"> & VariantProps<typeof InputStyles> & {
   type?: "text" | "date" | "email" | "number" | "tel" | "password" | "file" | "hidden" | "file";
   disabled?: boolean;
-  maxLength?: number;
   readOnly?: boolean;
   required?: boolean;
 };

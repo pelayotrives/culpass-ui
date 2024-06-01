@@ -63,17 +63,14 @@ const ButtonStyles = cva(
   {
     variants: {
       size: {
-        sm: "w-fit px-4 py-2",
-        md: "w-fit px-5 py-2.5",
-        lg: "w-fit px-6 py-3",
-        full: "w-full px-5 py-2.5",
+        sm: "w-fit px-4 py-2 text-base",
+        md: "w-fit px-5 py-2.5 text-lg",
+        lg: "w-fit px-6 py-3 text-xl",
+        full: "w-full px-5 py-2.5 text-lg",
       },
-      fontSize: {
-        paragraph1: "text-paragraph-xl",
-        paragraph2: "text-paragraph-lg",
-        paragraph3: "text-paragraph-md",
-        paragraph4: "text-paragraph",
-        paragraph5: "text-paragraph-sm",
+      adapt: {
+        auto: "min-h-0",
+        calibrate: "min-h-full"
       },
       intent: {
         solid1: "bg-primary-1 text-white hover:bg-primary-4 active:bg-primary-6",
@@ -91,7 +88,6 @@ const ButtonStyles = cva(
     defaultVariants: {
       size: "md",
       intent: "solid1",
-      fontSize: "paragraph4",
       iconPosition: "left",
     },
   }
@@ -104,13 +100,13 @@ type ButtonProps = ComponentProps<"button"> & VariantProps<typeof ButtonStyles> 
 };
 
 export const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ size, fontSize, intent, icon, iconPosition, type, className, children, ...props }, ref) => {
+  ({ size, intent, adapt, icon, iconPosition, type, className, children, ...props }, ref) => {
     const IconComponent = icon && icon !== 'none' ? iconMap[icon] : null;
     return (
       <button
         type={type}
         ref={ref}
-        className={cn(ButtonStyles({ size, fontSize, intent, iconPosition }), className)}
+        className={cn(ButtonStyles({ size, intent, adapt, iconPosition }), className)}
         {...props}
       >
         {IconComponent && <IconComponent className={iconPosition === "left" ? "mr-2" : "ml-2"} />}

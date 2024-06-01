@@ -10,12 +10,46 @@ const meta: Meta<typeof Input> = {
   tags: ["autodocs"],
   argTypes: {
     type: {
+      table: {
+        category: 'Multiple Option',
+      },
+      description: "This property sets the input type.",
       control: { type: 'select' },
       options: ['text', 'date', 'email', 'number', 'tel', 'password', 'file', 'hidden', 'file'],
     },
     placeholder: {
+      table: {
+        category: 'Text',
+      },
+      description: "This property sets the component placeholder so the user can see the required format or content.",
       control: { type: 'text' },
       if: { arg: 'type', neq: 'date' }
+    },
+    fontSize: {
+      table: {
+        category: 'Multiple Option',
+      },
+      description: "This property sets the text size.",
+      control: { type: 'select' },
+      options: ['paragraph1', 'paragraph2', 'paragraph3', 'paragraph4', 'paragraph5',],
+    },
+    disabled: {
+      table: {
+        category: 'Boolean',
+      },
+      description: "This property disables the input.",
+    },
+    required: {
+      table: {
+        category: 'Boolean',
+      },
+      description: "This property makes the input required.",
+    },
+    readOnly: {
+      table: {
+        category: 'Boolean',
+      },
+      description: "This property prevents the user from writing.",
     },
   }
 };
