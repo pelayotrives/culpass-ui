@@ -31,7 +31,17 @@ npm install culpass-ui
 
 ## Usage
 
-Import and use the components in your project as follows:
+Firstly, add this line in your `tailwind.config.js` file:
+
+```json
+content: [
+    "./components/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./node_modules/culpass-ui/src/**/*.{js,jsx,ts,tsx}"
+  ],
+```
+
+Then, import and use the components in your project as follows:
 
 ```javascript
 import { Button, Input, Text, Display, Title, Stack, Box } from 'culpass-ui';
