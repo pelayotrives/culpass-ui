@@ -3,23 +3,23 @@ import { VariantProps, cva } from "class-variance-authority";
 import { ComponentProps, forwardRef } from "react";
 import { IconType } from "react-icons";
 import {
-  FaPlus,
-  FaMinus,
-  FaCheck,
-  FaBan,
-  FaCalendarCheck,
-  FaEye,
-  FaEyeSlash,
-  FaEnvelope,
-  FaUser,
-  FaBookmark,
-  FaLocationDot,
-  FaAngleUp,
-  FaAngleRight,
   FaAngleDown,
   FaAngleLeft,
-  FaArrowRotateRight,
+  FaAngleRight,
+  FaAngleUp,
   FaArrowRotateLeft,
+  FaArrowRotateRight,
+  FaBan,
+  FaBookmark,
+  FaCalendarCheck,
+  FaCheck,
+  FaEnvelope,
+  FaEye,
+  FaEyeSlash,
+  FaLocationDot,
+  FaMinus,
+  FaPlus,
+  FaUser,
 } from "react-icons/fa6";
 
 const iconMap: { [key: string]: IconType | null } = {
