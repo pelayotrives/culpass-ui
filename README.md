@@ -6,13 +6,113 @@ Welcome to the Culpass UI Components Library, version 1.0! This library is a col
 
 The Culpass UI Components Library consists of the following components:
 
-- **Button**: A customizable button component.
-- **Input**: A flexible input component.
-- **Text**: A component for displaying text.
-- **Display**: A component for larger display text.
-- **Title**: A component for titles and headings.
-- **Stack**: A layout component for stacking elements.
-- **Box**: A layout component for creating boxes and containers.
+<table>
+  <tr>
+    <th>Component</th>
+    <th>Description</th>
+    <th>Properties</th>
+  </tr>
+  <tr>
+    <td><strong>Button</strong></td>
+    <td>A customizable button component.</td>
+    <td>
+      <ul>
+        <li><strong>adapt</strong>: The adaptation with respect to the parent container of the button (auto, calibrate)</li>
+        <li><strong>borderRadius</strong>: The rounding of the border of the button (sm, regular, md, lg, full)</li>
+        <li><strong>icon</strong>: The button icon type (none, add, delete, check, cancel, calendar, view, hide, mail, user, bookmark, location, up, right, down, left, refreshRight, refreshLeft)</li>
+        <li><strong>iconPosition</strong>: The position of the icon of the button (right, left)</li>
+        <li><strong>intent</strong>: The style scheme of the button (solid1, solid2, solid3, outline1, outline2, outline3, ghost1, ghost2, ghost3)</li>
+        <li><strong>size</strong>: The size of the button (sm, md, lg, full)</li>
+        <li><strong>type</strong>: The type of component that the button will be (button, submit, reset)</li>
+        <li><strong>className</strong>: Any other class, as long as it respects the Culpass Branding Guide</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Input</strong></td>
+    <td>A flexible input component.</td>
+    <td>
+      <ul>
+        <li><strong>disabled</strong>: Defines whether the input will be enabled or disabled (true, false)</li>
+        <li><strong>fontSize</strong>: The input font size (paragraph1, paragraph2, paragraph3, paragraph4, paragraph5)</li>
+        <li><strong>readOnly</strong>: Defines whether the input will be read-only or enabled to type (true, false)</li>
+        <li><strong>required</strong>: Defines whether the input will be required or not (true, false)</li>
+        <li><strong>type</strong>: The type of component that the input will be (text, date, email, number, tel, password, file, hidden, file)</li>
+        <li><strong>className</strong>: Any other class, as long as it respects the Culpass Branding Guide</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Text</strong></td>
+    <td>A component for displaying text.</td>
+    <td>
+      <ul>
+        <li><strong>fontSize</strong>: The text font size (paragraph1, paragraph2, paragraph3, paragraph4, paragraph5)</li>
+        <li><strong>fontFamily</strong>: The text font family (nunito, montserrat)</li>
+        <li><strong>weight</strong>: The text weight (thin, normal, medium, semibold, bold)</li>
+        <li><strong>lineHeight</strong>: The text line height (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)</li>
+        <li><strong>align</strong>: The text alignment (left, center, right, justify)</li>
+        <li><strong>italic</strong>: Defines whether the text will be underlined or not (true, false)</li>
+        <li><strong>underline</strong>: Defines whether the text will be in italic or not (true, false)</li>
+        <li><strong>className</strong>: Any other class, as long as it respects the Culpass Branding Guide</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Display</strong></td>
+    <td>A component for larger display text.</td>
+    <td>
+      <ul>
+        <li><strong>fontSize</strong>: The display font size (display1, display2, display3, display4, display5)</li>
+        <li><strong>fontFamily</strong>: The display font family (nunito, montserrat, instrument)</li>
+        <li><strong>weight</strong>: The display weight (thin, normal, medium, semibold, bold)</li>
+        <li><strong>lineHeight</strong>: The display line height (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)</li>
+        <li><strong>align</strong>: The display alignment (left, center, right, justify)</li>
+        <li><strong>italic</strong>: Defines whether the display will be underlined or not (true, false)</li>
+        <li><strong>underline</strong>: Defines whether the display will be in italic or not (true, false)</li>
+        <li><strong>className</strong>: Any other class, as long as it respects the Culpass Branding Guide</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Title</strong></td>
+    <td>A component for titles and headings.</td>
+    <td>
+      <ul>
+        <li><strong>as</strong>: The type of component that the title will be (h1, h2, h3, h4, h5, h6)</li>
+        <li><strong>fontSize</strong>: The title font size (title1, title2, title3, title4, title5)</li>
+        <li><strong>weight</strong>: The title weight (thin, normal, medium, semibold, bold)</li>
+        <li><strong>lineHeight</strong>: The title line height (1, 2, 3, 4, 5, 6, 7, 8, 9, 10)</li>
+        <li><strong>align</strong>: The title alignment (left, center, right, justify)</li>
+        <li><strong>italic</strong>: Defines whether the title will be underlined or not (true, false)</li>
+        <li><strong>underline</strong>: Defines whether the title will be in italic or not (true, false)</li>
+        <li><strong>className</strong>: Any other class, as long as it respects the Culpass Branding Guide</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Stack</strong></td>
+    <td>A layout component for stacking elements.</td>
+    <td>
+      <ul>
+        <li><strong>as</strong>: The type of component that the stack will be (it's recommended to be a div, section, article, main or aside)</li>
+        <li><strong>position</strong>: The stack main position (vertical, horizontal, verticalRev, horizontalRev, none)</li>
+        <li><strong>className</strong>: Any other class, as long as it respects the Culpass Branding Guide</li>
+      </ul>
+    </td>
+  </tr>
+  <tr>
+    <td><strong>Box</strong></td>
+    <td>A layout component for creating boxes and containers.</td>
+    <td>
+      <ul>
+        <li><strong>as</strong>: The type of component that the box will be (it's recommended to be a div, section, article, main or aside)</li>
+        <li><strong>className</strong>: Any other class, as long as it respects the Culpass Branding Guide</li>
+      </ul>
+    </td>
+  </tr>
+</table>
+
 
 ## Features
 
