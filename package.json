@@ -2,7 +2,7 @@
   "name": "culpass-ui",
   "version": "1.0.0",
   "description": "Library of dynamic components with multiple variations ready to implement in any Culpass project. Current stage: Beta.",
-  "private": true,
+  "private": false,
   "type": "module",
   "author": "Pelayo Trives",
   "license": "CC-BY-NC-ND 4.0 DEED",
