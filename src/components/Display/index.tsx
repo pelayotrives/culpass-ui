@@ -26,6 +26,7 @@ const DisplayStyles = cva("", {
     fontFamily: {
       nunito: "font-nunito",
       montserrat: "font-montserrat",
+      instrument: "font-instrument",
     },
     weight: {
       thin: "font-thin",

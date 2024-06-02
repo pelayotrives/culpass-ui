@@ -13,6 +13,7 @@ export default {
       fontFamily: {
         montserrat: ["Montserrat", "Helvetica", "sans-serif"],
         nunito: ["Nunito Sans", "Helvetica", "sans-serif"],
+        instrument: ["Instrument Serif", "Helvetica", "sans-serif"],
       },
       fontSize: {
         "display-xl": "140px",

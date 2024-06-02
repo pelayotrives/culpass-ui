@@ -3,7 +3,7 @@ import { VariantProps, cva } from "class-variance-authority";
 import { cn } from "@/utils";
 
 const InputStyles = cva([
-  "w-full",
+  "min-w-24",
   "rounded",
   "border",
   "border-quaternary-4",

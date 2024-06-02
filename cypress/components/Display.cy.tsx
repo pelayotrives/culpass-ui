@@ -31,6 +31,9 @@ describe('Display Component', () => {
 
     mount(<Display fontFamily="montserrat">Montserrat Font</Display>);
     cy.get('p').should('have.class', 'font-montserrat');
+
+    mount(<Display fontFamily="instrument">Instrument Serif Font</Display>);
+    cy.get('p').should('have.class', 'font-instrument');
   });
 
   it('renders with different font weights', () => {

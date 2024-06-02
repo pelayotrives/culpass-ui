@@ -6,6 +6,8 @@ import {
   PolymorphicRef,
 } from "@/utils/types";
 
+type AllowedTitleElements = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+
 const TitleStyles = cva(["font-montserrat"], {
   variants: {
     fontSize: {
@@ -59,18 +61,18 @@ const TitleStyles = cva(["font-montserrat"], {
   },
 });
 
-type TitleProps<C extends React.ElementType> = PolymorphicComponentPropsWithRef<
+type TitleProps<C extends AllowedTitleElements> = PolymorphicComponentPropsWithRef<
   C,
   VariantProps<typeof TitleStyles>
 >;
 
-type TitleComponent = <C extends React.ElementType = "span">(
+type TitleComponent = <C extends AllowedTitleElements = "h2">(
   props: TitleProps<C>
 ) => React.ReactElement | null;
 
 // @ts-expect-error - unexpected typing errors
 export const Title: TitleComponent = forwardRef(
-  <C extends React.ElementType = "span">(
+  <C extends AllowedTitleElements = "h2">(
     {
       as,
       align,
@@ -84,7 +86,7 @@ export const Title: TitleComponent = forwardRef(
     }: TitleProps<C>,
     ref?: PolymorphicRef<C>
   ) => {
-    const Component = as || "span";
+    const Component = as || "h2";
 
     return (
       <Component ref={ref}

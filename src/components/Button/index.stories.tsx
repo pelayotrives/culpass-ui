@@ -27,7 +27,7 @@ const meta: Meta<typeof Button> = {
       },
       description: "This property sets the button type and the layout it will have.",
       control: { type: 'select' },
-      options: ['solid1', 'solid2', 'solid3', 'outline1', 'outline2', 'outline3'],
+      options: ['solid1', 'solid2', 'solid3', 'outline1', 'outline2', 'outline3', 'ghost1', 'ghost2', 'ghost3'],
     },
     icon: {
       table: {
@@ -104,6 +104,19 @@ export const PrimaryOutline: Story = {
   },
 };
 
+export const PrimaryGhost: Story = {
+  args: {
+    children: "Lorem Ipsum",
+    size: "sm",
+    intent: "ghost1",
+    icon: "right",
+    iconPosition: "right",
+    disabled: false,
+    adapt: 'auto',
+    type: "button"
+  },
+};
+
 export const SecondarySolid: Story = {
   args: {
     children: "Lorem Ipsum",
@@ -129,6 +142,20 @@ export const SecondaryOutline: Story = {
     type: "button"
   },
 };
+
+export const SecondaryGhost: Story = {
+  args: {
+    children: "Lorem Ipsum",
+    size: "sm",
+    intent: "ghost2",
+    icon: "right",
+    iconPosition: "right",
+    disabled: false,
+    adapt: 'auto',
+    type: "button"
+  },
+};
+
 export const TertiarySolid: Story = {
   args: {
     children: "Lorem Ipsum",
@@ -147,6 +174,19 @@ export const TertiaryOutline: Story = {
     children: "Lorem Ipsum",
     size: "sm",
     intent: "outline3",
+    icon: "right",
+    iconPosition: "right",
+    disabled: false,
+    adapt: 'auto',
+    type: "button"
+  },
+};
+
+export const TertiaryGhost: Story = {
+  args: {
+    children: "Lorem Ipsum",
+    size: "sm",
+    intent: "ghost3",
     icon: "right",
     iconPosition: "right",
     disabled: false,
