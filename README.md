@@ -137,7 +137,7 @@ Firstly, add this line in your `tailwind.config.js` file:
 content: [
   "./components/**/*.{js,ts,jsx,tsx,mdx}",
   "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
-  "./node_modules/culpass-ui/src/**/*.{js,jsx,ts,tsx}"
+  "./node_modules/culpass-ui/dist/**/*.{js,jsx,ts,tsx}"
 ],
 ```
 
