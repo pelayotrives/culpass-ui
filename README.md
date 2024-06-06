@@ -96,7 +96,7 @@ The Culpass UI Components Library consists of the following components:
     <td>
       <ul>
         <li><strong>as</strong>: The type of component that the stack will be (it's recommended to be a div, section, article, main or aside)</li>
-        <li><strong>position</strong>: The stack main position (vertical, horizontal, verticalRev, horizontalRev, none)</li>
+        <li><strong>position</strong>: The stack main position (initial, block, vertical, horizontal, verticalRev, horizontalRev, none)</li>
         <li><strong>className</strong>: Any other class, as long as it respects the Culpass Branding Guide</li>
       </ul>
     </td>
