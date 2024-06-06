@@ -38,6 +38,12 @@ describe('Stack Component', () => {
       cy.get('div').should('have.class', 'hidden');
       cy.get('div').contains('Hidden Stack');
     });
+
+    it('renders with standard position', () => {
+      mount(<Stack position="block">Block Stack</Stack>);
+      cy.get('div').should('have.class', 'block');
+      cy.get('div').contains('Block Stack');
+    });
   
     it('renders with different HTML elements', () => {
       mount(<Stack as="section">Section Stack</Stack>);
