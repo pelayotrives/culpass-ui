@@ -24,7 +24,7 @@ const meta: Meta<typeof Stack> = {
       },
       description: "This property sets the stack main position.",
       control: { type: 'select' },
-      options: ['none', 'vertical', 'verticalRev', 'horizontal', 'horizontalRev'],
+      options: ['none', 'block', 'inline', 'vertical', 'verticalRev', 'horizontal', 'horizontalRev'],
     },
     ref: {
       table: {

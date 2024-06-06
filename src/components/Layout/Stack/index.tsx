@@ -13,6 +13,8 @@ const StackStyles = cva("", {
       verticalRev: "flex flex-col-reverse",
       horizontal: "flex flex-row",
       horizontalRev: "flex flex-row-reverse",
+      block: "block",
+      inline: "inline",
       none: "hidden",
     },
   },
