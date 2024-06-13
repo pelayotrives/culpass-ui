@@ -1,5 +1,37 @@
 # Changelog
 
+## [1.0.7] - 2024-06-08
+
+### Version 1.0.7
+
+- Revert changes. Typography back to normal properties. Config updated (2).
+
+---
+
+## [1.0.6] - 2024-06-08
+
+### Version 1.0.6
+
+- Revert changes. Typography back to normal properties. Config updated.
+
+---
+
+## [1.0.5] - 2024-06-08
+
+### Version 1.0.5
+
+- Size and mutable titles test (2).
+
+---
+
+## [1.0.4] - 2024-06-08
+
+### Version 1.0.4
+
+- Size and mutable titles test.
+
+---
+
 ## [1.0.3] - 2024-06-07
 
 ### Version 1.0.3

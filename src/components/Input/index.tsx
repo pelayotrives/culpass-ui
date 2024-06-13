@@ -51,11 +51,16 @@ const InputStyles = cva([
 {
   variants: {
     fontSize: {
-      paragraph1: "text-paragraph-xl",
-      paragraph2: "text-paragraph-lg",
-      paragraph3: "text-paragraph-md",
-      paragraph4: "text-paragraph",
-      paragraph5: "text-paragraph-sm",
+      paragraph1: "text-paragraph1",
+      paragraph2: "text-paragraph2",
+      paragraph3: "text-paragraph3",
+      paragraph4: "text-paragraph4",
+      paragraph5: "text-paragraph5",
+      paragraph6: "text-paragraph6",
+      paragraph7: "text-paragraph7",
+      paragraph8: "text-paragraph8",
+      paragraph9: "text-paragraph9",
+      paragraph10: "text-paragraph10",
     }
   },
   defaultVariants: {

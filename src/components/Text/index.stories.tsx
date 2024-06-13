@@ -39,7 +39,7 @@ const meta: Meta<typeof Text> = {
       },
       description: "This property sets the text size.",
       control: { type: 'select' },
-      options: ['paragraph1', 'paragraph2', 'paragraph3', 'paragraph4', 'paragraph5'],
+      options: ['paragraph1', 'paragraph2', 'paragraph3', 'paragraph4', 'paragraph5', 'paragraph6', 'paragraph7', 'paragraph8', 'paragraph9', 'paragraph10'],
     },
     lineHeight: {
       table: {

@@ -149,7 +149,15 @@ import { Button, Input, Text, Display, Title, Stack, Box } from 'culpass-ui';
 // Example usage in a component
 const App = () => (
   <div>
-    <Title>Welcome to Culpass UI</Title>
+    <Title
+      fontSize={{
+        'grid-sm-mobile': "title5",
+        'grid-lg-tablet': "title1"
+      }}
+      weight="normal"
+      className="text-center max-w-[768px]"
+    >
+    Welcome to Culpass UI</Title>
     <Stack>
       <Button>Click Me</Button>
       <Input placeholder="Enter text" />

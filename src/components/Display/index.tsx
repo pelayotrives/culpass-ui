@@ -1,27 +1,26 @@
-import { ComponentProps, forwardRef } from "react";
+import { forwardRef } from "react";
 import { VariantProps, cva } from "class-variance-authority";
 import { cn } from "@/utils";
+import {
+  PolymorphicComponentPropsWithRef,
+  PolymorphicRef,
+} from "@/utils/types";
 
-const DisplayStyles = cva("", {
+type AllowedDisplayElements = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
+
+const DisplayStyles = cva(["font-montserrat"], {
   variants: {
     fontSize: {
-      display1: "text-display-xl",
-      display2: "text-display-lg",
-      display3: "text-display-md",
-      display4: "text-display",
-      display5: "text-display-sm"
-    },
-    lineHeight: {
-      1: "leading-1",
-      2: "leading-2",
-      3: "leading-3",
-      4: "leading-4",
-      5: "leading-5",
-      6: "leading-6",
-      7: "leading-7",
-      8: "leading-8",
-      9: "leading-9",
-      10: "leading-10",
+      display1: "text-display1",
+      display2: "text-display2",
+      display3: "text-display3",
+      display4: "text-display4",
+      display5: "text-display5",
+      display6: "text-display6",
+      display7: "text-display7",
+      display8: "text-display8",
+      display9: "text-display9",
+      display10: "text-display10",
     },
     fontFamily: {
       nunito: "font-nunito",
@@ -35,6 +34,18 @@ const DisplayStyles = cva("", {
       semibold: "font-semibold",
       bold: "font-bold",
     },
+    lineHeight: {
+      1: "leading-1",
+      2: "leading-2",
+      3: "leading-3",
+      4: "leading-4",
+      5: "leading-5",
+      6: "leading-6",
+      7: "leading-7",
+      8: "leading-8",
+      9: "leading-9",
+      10: "leading-10",
+    },
     align: {
       left: "text-left",
       center: "text-center",
@@ -43,43 +54,55 @@ const DisplayStyles = cva("", {
     },
     italic: {
       true: "italic",
-      false: "not-italic",
+      false: "not-italic"
     },
     underline: {
       true: "underline underline-offset-2",
-      false: "no-underline",
+      false: "no-underline"
     },
   },
   defaultVariants: {
-    fontSize: "display4",
-    align: "left",
+    fontSize: "display6",
+    fontFamily: "montserrat",
     lineHeight: 2,
-    fontFamily: "nunito",
+    align: "left",
     weight: "semibold",
     italic: false,
-    underline: false,
+    underline: false
   },
 });
 
-type DisplayProps = ComponentProps<"p"> & VariantProps<typeof DisplayStyles>;
+type DisplayProps<C extends AllowedDisplayElements> = PolymorphicComponentPropsWithRef<
+  C,
+  VariantProps<typeof DisplayStyles>
+>;
 
-export const Display = forwardRef<HTMLParagraphElement, DisplayProps>(
-  ({ className, align, fontSize, fontFamily, lineHeight, weight, italic, underline, ...props }, ref) => {
+type DisplayComponent = <C extends AllowedDisplayElements = "h2">(
+  props: DisplayProps<C>
+) => React.ReactElement | null;
+
+// @ts-expect-error - unexpected typing errors
+export const Display: DisplayComponent = forwardRef(
+  <C extends AllowedDisplayElements = "h2">(
+    {
+      as,
+      align,
+      fontSize,
+      fontFamily,
+      lineHeight,
+      italic,
+      underline,
+      weight,
+      className,
+      ...props
+    }: DisplayProps<C>,
+    ref?: PolymorphicRef<C>
+  ) => {
+    const Component = as || "h2";
+
     return (
-      <p
-        ref={ref}
-        className={cn(
-          DisplayStyles({
-            align,
-            fontSize,
-            fontFamily,
-            lineHeight,
-            weight,
-            italic,
-            underline,
-          }),
-          className
-        )}
+      <Component ref={ref}
+        className={cn(DisplayStyles({fontSize, fontFamily, weight, lineHeight, italic, underline, align, className,}))}
         {...props}
       />
     );

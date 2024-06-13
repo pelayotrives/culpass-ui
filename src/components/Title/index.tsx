@@ -11,11 +11,16 @@ type AllowedTitleElements = "h1" | "h2" | "h3" | "h4" | "h5" | "h6";
 const TitleStyles = cva(["font-montserrat"], {
   variants: {
     fontSize: {
-      title1: "text-title-xl",
-      title2: "text-title-lg",
-      title3: "text-title-md",
-      title4: "text-title",
-      title5: "text-title-sm",
+      title1: "text-title1",
+      title2: "text-title2",
+      title3: "text-title3",
+      title4: "text-title4",
+      title5: "text-title5",
+      title6: "text-title6",
+      title7: "text-title7",
+      title8: "text-title8",
+      title9: "text-title9",
+      title10: "text-title10",
     },
     weight: {
       thin: "font-thin",

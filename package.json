@@ -1,6 +1,6 @@
 {
   "name": "culpass-ui",
-  "version": "1.0.3",
+  "version": "1.0.7",
   "description": "Library of dynamic components with multiple variations ready to implement in any Culpass project. Current stage: Beta.",
   "private": false,
   "type": "module",

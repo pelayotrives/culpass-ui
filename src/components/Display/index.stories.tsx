@@ -39,7 +39,7 @@ const meta: Meta<typeof Display> = {
       },
       description: "This property sets the text size.",
       control: { type: 'select' },
-      options: ['display1', 'display2', 'display3', 'display4', 'display5'],
+      options: ['display1', 'display2', 'display3', 'display4', 'display5', 'display6', 'display7', 'display8', 'display9', 'display10'],
     },
     lineHeight: {
       table: {
@@ -78,7 +78,7 @@ export const Default: Story = {
     align: "left",
     children: "Labore aliqua proident aliqua.",
     italic: false,
-    fontSize: "display4",
+    fontSize: "display8",
     underline: false,
     weight: "semibold",
     fontFamily: "nunito",

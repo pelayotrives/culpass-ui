@@ -39,7 +39,7 @@ const meta: Meta<typeof Title> = {
       },
       description: "This property sets the text font size.",
       control: { type: 'select' },
-      options: ['title1', 'title2', 'title3', 'title4', 'title5'],
+      options: ['title1', 'title2', 'title3', 'title4', 'title5', 'title6', 'title7', 'title8', 'title9', 'title10'],
     },
     lineHeight: {
       table: {
