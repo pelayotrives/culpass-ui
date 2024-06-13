@@ -5,16 +5,16 @@ import { mount } from "cypress/react18";
 describe('Input Component', () => {
   it('renders with default props', () => {
     mount(<Input placeholder="Default Input" />);
-    cy.get('input').should('have.class', 'text-paragraph');
+    cy.get('input').should('have.class', 'text-paragraph4');
     cy.get('input').should('have.attr', 'placeholder', 'Default Input');
   });
 
   it('renders with different font sizes', () => {
     mount(<Input fontSize="paragraph1" placeholder="Paragraph 1" />);
-    cy.get('input').should('have.class', 'text-paragraph-xl');
+    cy.get('input').should('have.class', 'text-paragraph1');
 
     mount(<Input fontSize="paragraph2" placeholder="Paragraph 2" />);
-    cy.get('input').should('have.class', 'text-paragraph-lg');
+    cy.get('input').should('have.class', 'text-paragraph2');
   });
 
   it('renders with different input types', () => {

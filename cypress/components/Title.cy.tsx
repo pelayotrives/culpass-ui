@@ -5,7 +5,7 @@ import { mount } from "cypress/react18";
 describe('Title Component', () => {
   it('renders with default props', () => {
     mount(<Title>Default Title</Title>);
-    cy.get('h2').should('have.class', 'text-title');
+    cy.get('h2').should('have.class', 'text-title4');
     cy.get('h2').contains('Default Title');
   });
 
@@ -20,11 +20,11 @@ describe('Title Component', () => {
   });
 
   it('renders with different font sizes', () => {
-    mount(<Title fontSize="title1">Title 1</Title>);
-    cy.get('h2').should('have.class', 'text-title-xl');
+    mount(<Title fontSize="title7">Title 1</Title>);
+    cy.get('h2').should('have.class', 'text-title7');
 
-    mount(<Title fontSize="title2">Title 2</Title>);
-    cy.get('h2').should('have.class', 'text-title-lg');
+    mount(<Title fontSize="title8">Title 2</Title>);
+    cy.get('h2').should('have.class', 'text-title8');
   });
 
   it('renders with different font weights', () => {

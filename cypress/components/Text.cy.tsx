@@ -5,16 +5,16 @@ import { mount } from "cypress/react18";
 describe('Text Component', () => {
   it('renders with default props', () => {
     mount(<Text>Default Text</Text>);
-    cy.get('p').should('have.class', 'text-paragraph');
+    cy.get('p').should('have.class', 'text-paragraph8');
     cy.get('p').contains('Default Text');
   });
 
   it('renders with different font sizes', () => {
-    mount(<Text fontSize="paragraph1">Paragraph 1</Text>);
-    cy.get('p').should('have.class', 'text-paragraph-xl');
+    mount(<Text fontSize="paragraph4">Paragraph 4</Text>);
+    cy.get('p').should('have.class', 'text-paragraph4');
 
-    mount(<Text fontSize="paragraph2">Paragraph 2</Text>);
-    cy.get('p').should('have.class', 'text-paragraph-lg');
+    mount(<Text fontSize="paragraph5">Paragraph 5</Text>);
+    cy.get('p').should('have.class', 'text-paragraph5');
   });
 
   it('renders with different font families', () => {
